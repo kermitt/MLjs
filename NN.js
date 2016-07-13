@@ -90,10 +90,8 @@ var Attic = {
                 results[row][col] = x;
             }
         }
-        return result;s
+        return results;
     }
-
-
 }
 
 
@@ -129,8 +127,8 @@ var NN = {
 				matrix = Attic.numpy_transpose(LoL_inputs);
 				matrix = Attic.addBias(matrix);
 				var layer = Attic.matrix_multiply(this.weights[index],matrix);
-                layer = sigmoid_matrix(layer); 
-
+                layer = Attic.sigmoid_matrix(layer); 
+                console.log( layer  );
     		}  else {
 
     			//console.log("!! "  + index ); 
