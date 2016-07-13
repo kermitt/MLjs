@@ -147,6 +147,12 @@ var Tests = {
             }
         }
         this._verdict(isOk, "149\ttest_matrix_multiply");
+    },
+
+    test_coreMatrixMult : function () {
+        this._note("\n\n");
+        var orig = [[ 0.49418474,  0.51405945,  0.51469793], [ 0.47687486,  0.47760692,  0.45678165]];
+        this._note(Library.display_LoL(orig));
     }
 }
 
@@ -164,3 +170,4 @@ Tests.getRandomMatrix_ofGivenShape();
 Tests.test_transpose();
 Tests.test_addOnesBiasLayer();
 Tests.test_matrix_multiply();
+Tests.test_coreMatrixMult();

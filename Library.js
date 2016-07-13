@@ -41,10 +41,25 @@ var Library = {
         var transposed = ary[0].map(function(col, i) {
             return ary.map(function(row) {
                 return row[i]
-            })
+               })
         });
         return transposed;
     },
+    display_LoL : function( LoL ) {
+            var out = "["; 
+            for ( var index in LoL ) {
+                out += "\t[";
+                out += LoL[index];
+                out += "]"; 
+                if ( index < LoL.length - 1 ) {
+                        out += "\n";
+                } else {
+                        out += "\t]";
+                }
+            } 
+            return out; 
+    },
+
     numpy_ones: function(ary) {
         // mimick numpy.ones([1,COLUMNS])
         // add a bias layer of ONEs to a rectangle matrix...
@@ -98,6 +113,7 @@ try {
     console.log("referenceError: " + referenceError);
 }
 /*
+https://www.youtube.com/watch?v=ra_s5iZ9Al4
 echo "# MLjs" >> README.md
 git init
 git add README.md
