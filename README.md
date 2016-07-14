@@ -10,10 +10,11 @@ His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A
 <p>
 
 
+<hr>
+Below is the python that I ported over into javascript
 
-Below is the python that I ported over into javascript ( hope the .md file does not break my formatting )
-import numpy as np
 <pre>
+import numpy as np
 class BackPropagationNetwork:
     layerCount = 0
     shape = None
