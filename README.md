@@ -1,18 +1,19 @@
 # MLjs
 
-NN.js = main logic
-NN_functions.js = grab bag of functions which mimick some python functionality
-NN_TDD.js = my tests
-NN_Driver.js = The equivilent of 'main'
-
+NN.js = main logic<br/>
+NN_functions.js = grab bag of functions which mimick some python functionality<br/>
+NN_TDD.js = my tests<br/>
+NN_Driver.js = The equivilent of 'main'<br/>
+<p>
 NOTE! Profs to Ryan Harris's neuralnet videos...  Better than Udemy.com. :) 
 His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A
+<p>
 
 
 
 Below is the python that I ported over into javascript ( hope the .md file does not break my formatting )
 import numpy as np
-
+<code>
 class BackPropagationNetwork:
     layerCount = 0
     shape = None
@@ -77,4 +78,4 @@ if __name__ == "__main__":
     print("INPUT\n{0}".format(lvInput))
     lvOutput = bpn.Run(lvInput)
     print("OUTPUT\n{0}".format(lvOutput))
-
+</code>
