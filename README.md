@@ -13,7 +13,7 @@ His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A
 
 Below is the python that I ported over into javascript ( hope the .md file does not break my formatting )
 import numpy as np
-<code>
+<pre>
 class BackPropagationNetwork:
     layerCount = 0
     shape = None
@@ -78,4 +78,4 @@ if __name__ == "__main__":
     print("INPUT\n{0}".format(lvInput))
     lvOutput = bpn.Run(lvInput)
     print("OUTPUT\n{0}".format(lvOutput))
-</code>
+</pre>
