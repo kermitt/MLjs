@@ -1,4 +1,5 @@
-var Attic = require('./NN').Attic;
+var Attic = require('./NN_functions').Attic;
+var NN = require('./NN').NN;
 
 var show = false;
 
@@ -46,16 +47,44 @@ function sigmoid() {
 
 		}
 	}
-//    console.log("GIVEN:");
-//    console.log(given);
-//    console.log("ACTUAL: ")
-//    console.log( actual ); 
-//    console.log("EXPECTED");
-//    console.log(expected); 
     _verdict(isOk, "sigmoid");
-
 }
 
+function simple_endToEnd(){ 
+    _header("simple_endToEnd");
+
+    var shape = [2, 2, 1]; // one input layer w/ two inputs | one hidden w/ two nodes and | one output node
+
+
+    var weights_to_override_with = [[[ 0.02488965, -0.17555775,  0.00630082],[ 0.03018733, -0.09007787, -0.03123654]], [[ 0.04102   ,  0.01435366, -0.12914455]]];
+
+
+    var my_decimal = 0.1;
+
+    info("Shape", shape);
+    info("Decimal", my_decimal);
+
+    NN.init(shape, my_decimal);
+    NN.weights = weights_to_override_with;    
+
+    info("Weights", NN.weights);
+    var LoL_inputs = [[0,0],[1,1],[-1, 0.5]];
+     
+    var results = NN.run(LoL_inputs);
+    results = Attic.numpy_transpose(results);
+    info("Results", results); 
+
+    var expected = [[ 0.47464547],[ 0.47420731],[ 0.4742904 ]]; 
+
+    var isOk = true;
+    for ( var row = 0; row < results.length; row++) { 
+        for ( var col = 0; col < results[row].length; col++ ) {
+            isOk &= results[row][col].toFixed(3) == expected[row][col].toFixed(3);
+        }
+    }
+    _verdict(isOk, "simple_endToEnd");
+}
+////////////////////////// HOUSEWORK follows ////////////////
 function _verdict(bool, caller) {
     var passfail = bool ? "PASS" : "FAIL";
     console.log(passfail + "\t" + caller);
@@ -64,7 +93,10 @@ function _verdict(bool, caller) {
 function _header(msg) {
     console.log("\n\t" + msg);
 }
-
+function info(msg, obj) {
+    console.log("\n" + msg ); 
+    console.log(obj);
+}
 function log(obj) {
     if (show) {
         console.log(obj);
@@ -72,4 +104,5 @@ function log(obj) {
 }
 
 zip();
-sigmoid(); 
+sigmoid();
+simple_endToEnd();
