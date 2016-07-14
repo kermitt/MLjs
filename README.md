@@ -1,6 +1,9 @@
 # MLjs
 
-Currently still just in the TDD.js and Library.js...  later, once I've created all the backing functions in the Library.js file ( and TDD to test them ) then I will build out the BackPropogationNetwork.js file.
+NN.js = main logic
+NN_functions.js = grab bag of functions which mimick some python functionality
+NN_TDD.js = my tests
+NN_Driver.js = The equivilent of 'main'
 
 NOTE! Profs to Ryan Harris's neuralnet videos...  Better than Udemy.com. :) 
 His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A
