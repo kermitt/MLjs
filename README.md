@@ -6,7 +6,7 @@ NN_TDD.js = my tests<br/>
 NN_Driver.js = The equivilent of 'main'<br/>
 <p>
 NOTE! Profs to Ryan Harris's neuralnet videos...  Better than Udemy.com. :) 
-His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A
+His channel is at: https://www.youtube.com/channel/UCRAmB5K-2GLvtaXcH9GCy-A or https://www.youtube.com/watch?v=ra_s5iZ9Al4&list=PLRyu4ecIE9tibdzuhJr94uQeKnOFkkbq6&index=2
 <p>
 
 
